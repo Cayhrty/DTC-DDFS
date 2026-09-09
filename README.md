@@ -135,10 +135,9 @@ iVerilog/
 
 ## Required Technology Library Files
 
-To run iVerilog simulation and synthesis, the following technology library files are required:
+To run iVerilog simulation and synthesis, the following technology library files are required (not provided in this repo):
 
 - **tpfn65gpgv2od3.v** - Standard cell library definitions
-- **tcbn65gplus.v** - Core standard cell library 
 - **DW_ram_r_w_a_lat.v** - Designware RAM compiler module (read/write with latches)
 
 These files must be included when compiling and simulating:
@@ -162,7 +161,7 @@ iverilog -o sim.out \
 
 ### Test Platform
 `chip_top_tb.v` provides a comprehensive simulation example including:
-- 500 MHz and 2 GHz clock generation
+- 625MHz and 2.5 GHz clock generation
 - SPI transaction handling
 - File logging output
 
@@ -200,7 +199,6 @@ This RTL code can be integrated with standard technology libraries. After adding
 
 1. Technology library files (`.lib`, `.lef`, `.gds`)
 2. Constraint files (`.sdc`, `.xdc`)
-3. Power integrity definitions
 
 ## License
 
