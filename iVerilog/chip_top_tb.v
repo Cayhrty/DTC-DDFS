@@ -68,6 +68,7 @@ always @(posedge clk_hs) begin
 end     
 
 // Instantiate the DUT
+// NOTE: DAC_SEL** removed ,because three of them are same with SEL**, ONLY one ramain to reduce power
 chip_top uut (
     .clk(clk),
     .clk_hs(clk_hs),
@@ -85,15 +86,7 @@ chip_top uut (
     .selEA(selEA), .selEB(selEB), .selEC(selEC), .selED(selED),
     .selFA(selFA), .selFB(selFB), .selFC(selFC), .selFD(selFD),
     .selGA(selGA), .selGB(selGB), .selGC(selGC), .selGD(selGD),
-    .selHA(selHA), .selHB(selHB), .selHC(selHC), .selHD(selHD),
-    .DAC_selAA(DAC_SELAA), .DAC_selAB(DAC_SELAB), .DAC_selAC(DAC_SELAC), .DAC_selAD(DAC_SELAD),
-    .DAC_selBA(DAC_SELBA), .DAC_selBB(DAC_SELBB), .DAC_selBC(DAC_SELBC), .DAC_selBD(DAC_SELBD),
-    .DAC_selCA(DAC_SELCA), .DAC_selCB(DAC_SELCB), .DAC_selCC(DAC_SELCC), .DAC_selCD(DAC_SELCD),
-    .DAC_selDA(DAC_SELDA), .DAC_selDB(DAC_SELDB), .DAC_selDC(DAC_SELDC), .DAC_selDD(DAC_SELDD),
-    .DAC_selEA(DAC_SELEA), .DAC_selEB(DAC_SELEB), .DAC_selEC(DAC_SELEC), .DAC_selED(DAC_SELED),
-    .DAC_selFA(DAC_SELFA), .DAC_selFB(DAC_SELFB), .DAC_selFC(DAC_SELFC), .DAC_selFD(DAC_SELFD),
-    .DAC_selGA(DAC_SELGA), .DAC_selGB(DAC_SELGB), .DAC_selGC(DAC_SELGC), .DAC_selGD(DAC_SELGD),
-    .DAC_selHA(DAC_SELHA), .DAC_selHB(DAC_SELHB), .DAC_selHC(DAC_SELHC), .DAC_selHD(DAC_SELHD)
+    .selHA(selHA), .selHB(selHB), .selHC(selHC), .selHD(selHD)
 );
 
 // Clock generation
