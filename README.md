@@ -2,9 +2,9 @@
 
 **DTC based DDFS RTL for radar FMCW synthesis**
 
-This repository contains a complete RTL (Register Transfer Level) chip source code for a Direct Digital Synthesis (DDS) based radar FMCW signal synthesizer. The design is implemented in Verilog.
+This repository contains a complete RTL (Register Transfer Level) chip source code and Testbench for a Direct Digital Synthesis (DDS) based radar FMCW signal synthesizer. The design is implemented in Verilog.
 
-> ⚠️ **Important Notice**: This is chip RTL source code that can be directly used for iVerilog simulation after adding technology library files.
+> **Important Notice**: This is chip RTL source code that can be directly used for iVerilog simulation and syn,P&R after adding technology library files and RAM lib files in Design compiler (DesignWare RAM).
 
 ## Overview
 
@@ -137,7 +137,7 @@ iVerilog/
 
 To run iVerilog simulation and synthesis, the following technology library files are required (not provided in this repo):
 
-- **tpfn65gpgv2od3.v** - Standard cell library definitions
+- **tpfn65gpgv2od3.v** - Standard cell PAD library definitions
 - **DW_ram_r_w_a_lat.v** - Designware RAM compiler module (read/write with latches)
 
 These files must be included when compiling and simulating:
